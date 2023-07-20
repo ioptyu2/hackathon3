@@ -14,15 +14,15 @@ export default function Pokedex() {
                 arr.push(data)
             }
             
-            setPokedex(data) 
+            setPokedex(arr) 
         }
         displayPokedex()
     }, [])
     return (
         <>
-        {pokedex.map((pokemon) => {
+        {pokedex.map((pokemon, i) => {
            return (
-            <Pokemon data={pokedex}/>
+            <Pokemon data={pokemon} key={i}/>
            ) 
         })}
         </>
