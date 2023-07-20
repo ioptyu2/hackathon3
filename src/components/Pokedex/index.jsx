@@ -19,13 +19,13 @@ export default function Pokedex() {
         displayPokedex()
     }, [])
     return (
-        <>
+        <div className="shows">
         {pokedex.map((pokemon, i) => {
            return (
             <Pokemon data={pokemon} key={i}/>
            ) 
         })}
-        </>
+        </div>
     )
 
 }
